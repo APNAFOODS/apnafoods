@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>APNAFOODS — گھر سے ڈیلیوری</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>اپنافوڈز</h1>
+      <p class="tag">گرما گرم گھر جیسا کھانا — سیدھا آپ کے دروازے پر</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="menu-section">
+      <h2>میو</h2>
+      <div id="menu" class="menu-grid"></div>
+    </section>
+
+    <aside class="cart-section">
+      <h3>آپ کا کارٹ</h3>
+      <div id="cart-items"></div>
+      <div class="cart-total">کل: <span id="cart-total">Rs 0</span></div>
+
+      <button id="checkout-btn" class="btn primary" disabled>آرڈر کریں (WhatsApp)</button>
+      <button id="clear-cart" class="btn">خالی کریں</button>
+
+      <div class="checkout-form" id="checkout-form">
+        <h4>تفصیلات درج کریں</h4>
+        <input id="cust-name" placeholder="آپ کا نام" />
+        <input id="cust-phone" placeholder="فون نمبر (مثلاً 03001234567)" />
+        <textarea id="cust-address" placeholder="پتہ" rows="3"></textarea>
+        <label><input type="checkbox" id="include-notes"> خصوصی ہدایات شامل کریں</label>
+        <textarea id="cust-notes" placeholder="نوٹس (اختیاری)" rows="2"></textarea>
+      </div>
+    </aside>
+
+    <section class="admin-section">
+      <h3>Admin (مینو میں اشیاء شامل کریں)</h3>
+      <div class="admin-login">
+        <input id="admin-pass" placeholder="Admin پاس ورڈ" type="password" />
+        <button id="admin-login" class="btn">لاگ ان</button>
+        <button id="admin-logout" class="btn" style="display:none">لاگ آؤٹ</button>
+      </div>
+
+      <div id="admin-panel" style="display:none">
+        <form id="add-item-form" class="add-form">
+          <input name="name" placeholder="آئٹم کا نام" required />
+          <input name="price" placeholder="قیمت (مثلاً 250)" required />
+          <input name="desc" placeholder="تفصیل (اختیاری)" />
+          <button class="btn">میو میں شامل کریں</button>
+        </form>
+        <p class="hint">نوٹ: آئٹمز آپ کے براؤزر میں محفوظ رہیں گے (localStorage)</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>APNAFOODS — سیدھا WhatsApp پر آرڈر کریں</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
