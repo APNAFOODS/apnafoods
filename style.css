@@ -1,25 +1,35 @@
-*{box-sizing:border-box;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans','Noto Naskh Arabic',sans-serif}
-:root{--accent:#0b7c59;--muted:#666}
-body{margin:0;background:#f7f7f8;color:#111;line-height:1.4}
+
+*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',sans-serif}
+:root{--accent:#d84315;--muted:#666}
+body{margin:0;background:#fafafa;color:#111;line-height:1.5}
 .container{max-width:1100px;margin:0 auto;padding:18px}
-.site-header{background:var(--accent);color:#fff;padding:26px 0;text-align:center}
-.site-header h1{margin:0;font-size:32px;letter-spacing:1px}
-.tag{opacity:.9;margin:6px 0 0}
-main{display:grid;grid-template-columns:1fr 320px;gap:18px;padding:18px}
-.menu-section, .admin-section{background:#fff;padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,.06)}
-.menu-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
-.card{background:#fff;border-radius:8px;padding:12px;border:1px solid #eee;display:flex;flex-direction:column;justify-content:space-between}
-.card h4{margin:0 0 6px;font-size:18px}
-.card p{margin:0 0 8px;color:var(--muted);font-size:13px}
-.card .price{font-weight:700}
-.card .controls{display:flex;gap:8px;align-items:center;justify-content:flex-start}
-.btn{display:inline-block;padding:8px 10px;border-radius:8px;border:1px solid #ddd;background:#fff;cursor:pointer}
-.btn.primary{background:var(--accent);color:#fff;border-color:transparent}
-.cart-section{background:#fff;padding:14px;border-radius:8px;box-shadow:0 6px 18px rgba(2,6,23,.06);height:fit-content}
-#cart-items .cart-row{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px dashed #eee;}
-.cart-total{font-weight:700;margin-top:8px}
-.checkout-form{margin-top:10px}
-.checkout-form input, .checkout-form textarea, .add-form input{width:100%;padding:8px;margin:6px 0;border-radius:6px;border:1px solid #ddd}
-.admin-section .hint{font-size:12px;color:var(--muted)}
-.site-footer{padding:18px;text-align:center;color:#444;margin-top:18px}
-@media(max-width:900px){main{grid-template-columns:1fr} .cart-section{order:3} .admin-section{order:2}}
+.site-header{background:var(--accent);color:#fff}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:18px}
+.brand h1{margin:0;font-size:22px;letter-spacing:1px}
+.tagline{opacity:.9}
+.contact .wa{background:#fff;color:var(--accent);padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+.hero{padding:18px 0;text-align:center}
+.deals{margin:12px 0}
+.deals-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.deal-card{background:#fff;padding:12px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.06);text-align:center}
+.deal-card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.deal-card h3{margin:10px 0 6px}
+.deal-card .desc{color:var(--muted);font-size:14px}
+.deal-card .meta{margin-top:6px;color:var(--muted);font-size:13px}
+.deal-card .price{font-weight:800;color:var(--accent);margin-top:8px;font-size:18px}
+.order-btn{display:inline-block;margin-top:10px;padding:8px 12px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:700}
+.menu-section{margin-top:18px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.menu-card{background:#fff;padding:12px;border-radius:10px;box-shadow:0 6px 16px rgba(0,0,0,.05);text-align:center}
+.menu-card img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.menu-card h4{margin:8px 0}
+.menu-card .meta{color:var(--muted);font-size:13px}
+.menu-card .price{font-weight:800;margin-top:6px}
+.order-small{display:inline-block;margin-top:8px;padding:6px 10px;border-radius:8px;background:#222;color:#fff;text-decoration:none}
+.add-section{margin-top:18px;background:#fff;padding:12px;border-radius:10px}
+.add-section input{width:100%;padding:10px;margin:8px 0;border-radius:8px;border:1px solid #eee}
+.add-section button{background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+.site-footer{margin-top:20px;background:#fff;padding:18px;border-radius:10px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.site-footer a{color:var(--accent);text-decoration:none}
+@media(max-width:700px){.site-header .container{flex-direction:column;gap:8px}}
